@@ -1,18 +1,19 @@
-! FEM analysis of 1-D second order ordinary differential equation
-! using Lagrange interpolation polynomials.
-! This program solves the 1-D second order differemtial equation:
-! a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
-! where, both u and f are function of x only
-! DEVELOPER
-!   Hom Nath Gharti
-!   formerly at Institute of Engineering, Tribhuvan University, Nepal
-!   formerly at NORSAR, Norway
-!   Department of Geosciences, Princeton University, USA
-!   hngharti_AT_gmail_DOT_com 
-!
-! HISTORY
-!   Oct 24,2006, HNG: original package created
-!   Apr 25,2017, HNG: modified package 
+FEM analysis of 1-D second order ordinary differential equation
+using Lagrange interpolation polynomials.
+This program solves the 1-D second order differemtial equation:
+a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+where, both u and f are function of x only
+
+DEVELOPER
+  Hom Nath Gharti
+  formerly at Institute of Engineering, Tribhuvan University, Nepal
+  formerly at NORSAR, Norway
+  Department of Geosciences, Princeton University, USA
+  hngharti_AT_gmail_DOT_com 
+
+HISTORY
+  Oct 24,2006, HNG: original package created
+  Apr 25,2017, HNG: modified package 
 
 COMPILE:
 	- go to parent folder
