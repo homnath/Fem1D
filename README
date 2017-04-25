@@ -1,9 +1,10 @@
 FEM analysis of 1-D second order ordinary differential equation
 using Lagrange interpolation polynomials.
 This program solves the 1-D second order differemtial equation:
-a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
 where, both u and f are function of x only
-
+VERSION:
+  Fem1D 1.0.0
 DEVELOPER
   Hom Nath Gharti
   formerly at Institute of Engineering, Tribhuvan University, Nepal
@@ -28,7 +29,7 @@ INPUT:
 
   #----------------------------------------------------------------------------
   # Define the 1D second order differential equation: 
-  # a(d2u/dx2) + b(du/dx) + cu = f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+  # a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
   # where, both u and f are function of x only
   a: 1.0  
   b: 0.0

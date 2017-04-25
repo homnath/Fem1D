@@ -3,7 +3,7 @@
 !
 ! PURPOSE
 !   This program solves the 1-D second order differential equation:
-!   a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+!   a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
 !   where, both u and f are function of x only
 !
 ! DEVELOPER
@@ -44,11 +44,13 @@ if(trim(arg1)==('--help'))then
   write(stdout,'(a)')'Options:'
   write(stdout,'(a)')'    --help        : Display this information.'
   write(stdout,'(a)')'    --version     : Display version information.'
+  stop
 elseif(trim(arg1)==('--version'))then
-  write(stdout,'(a)')'FEM1D 1.0'
+  write(stdout,'(a)')'Fem1D 1.0.0'
   write(stdout,'(a)')'This is free software; see the source for copying '
   write(stdout,'(a)')'conditions.  There is NO warranty; not even for '
   write(stdout,'(a)')'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+  stop
 endif
 
 ! get input file name

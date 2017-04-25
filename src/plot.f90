@@ -66,7 +66,7 @@ implicit none
 real(kind=kreal),intent(in) :: x
 
 ! this expression is only valid for
-! a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+! a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
 ! where, a=1, b=0, c=-1, f=10, u0=0, q=10, L=10
 exactu=10.0_8*exp(-x)*(-exp(10.0_8)-exp(20.0_8)+exp(x)- &
  exp(2.0*x)+exp(2*(5+x))+exp(20+x))/(1.0_8+exp(20.0_8))
