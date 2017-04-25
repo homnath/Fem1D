@@ -1,16 +1,22 @@
 FEM analysis of 1-D second order ordinary differential equation
-using Lagrange interpolation polynomials.
-This program solves the 1-D second order differemtial equation:
+-------------------------------------------------------------------------------
+This program solves the 1-D second order ordinary differential equation:
 a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
-where, both u and f are function of x only
-VERSION:
-  Fem1D 1.0.0
+where, both u and f are function of x only. This package is mainly intended for
+educational purpose, and it introduces a general concept on Discretization, 
+Gauss quadrature, forming stiffness matrix, imposing boundary conditions,
+and matrix solution.
+-------------------------------------------------------------------------------
+
 DEVELOPER
   Hom Nath Gharti
   formerly at Institute of Engineering, Tribhuvan University, Nepal
   formerly at NORSAR, Norway
   Department of Geosciences, Princeton University, USA
   hngharti_AT_gmail_DOT_com 
+
+VERSION:
+  Fem1D 1.0.0
 
 HISTORY
   Oct 24,2006, HNG: original package created
