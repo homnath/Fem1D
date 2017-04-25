@@ -3,7 +3,7 @@
 # where, both u and f are function of x only
 a: 1.0  
 b: 0.0
-c: 1.0
+c: -1.0
 f: 10.0
 
 # Define mesh

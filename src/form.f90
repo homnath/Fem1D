@@ -10,15 +10,9 @@ subroutine form
 use global
 implicit none
 integer :: i,j,k,kk,elm,ngpoint,row,col,gdfr,gdfc,gnoder,gnodec
-real(kind=kreal) :: jac,jaci,a,b,c,f
+real(kind=kreal) :: jac,jaci
 real(kind=kreal),dimension(10) :: phi,dphi_dxi,xi,w
 real(kind=kreal),allocatable :: local_fvec(:,:),local_kmat(:,:,:)
-
-! Set parameters
-a=1.0_kreal
-b=0.0_kreal
-c=-1.0_kreal
-f=10.0_kreal
 
 allocate(local_fvec(nedof,nelmt),local_kmat(nedof,nedof,nelmt))
 
@@ -36,10 +30,10 @@ do elm=1,nelmt
         call lagrange(nenode,xi(k),phi,dphi_dxi)
         call jacobian(elm,nenode,dphi_dxi,jac)
         jaci=1/jac ! For scalar jac
-        local_kmat(i,j,elm)=local_kmat(i,j,elm)+(a*dphi_dxi(i)*dphi_dxi(j)*jaci)*w(k) &
-        +(-b*phi(i)*dphi_dxi(j))*w(k)+(-c*phi(i)*phi(j)*jac)*w(k)
+        local_kmat(i,j,elm)=local_kmat(i,j,elm)+(de_a*dphi_dxi(i)*dphi_dxi(j)*jaci)*w(k) &
+        +(-de_b*phi(i)*dphi_dxi(j))*w(k)+(-de_c*phi(i)*phi(j)*jac)*w(k)
         if(j==i)then
-          local_fvec(i,elm)=local_fvec(i,elm)+(f*phi(i)*jac)*w(k)
+          local_fvec(i,elm)=local_fvec(i,elm)+(de_f*phi(i)*jac)*w(k)
         endif
       enddo
     enddo

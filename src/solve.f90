@@ -35,7 +35,6 @@ do i=1,nnode
     enddo
   endif
 enddo
-
 print*,'----------------------------------------'
 print*,'Global stiffness matrix'
 print*,'----------------------------------------'
