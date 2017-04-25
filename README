@@ -4,7 +4,7 @@ This program solves the 1-D second order ordinary differential equation:
 a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
 where, both u and f are function of x only. This package is mainly intended for
 educational purpose, and it introduces a general concept on discretization, 
-Gauss quadrature, stiffness matrix, boundary conditions, matrix solution.
+Gauss quadrature, stiffness matrix, boundary conditions, and matrix solution.
 -------------------------------------------------------------------------------
 
 DEVELOPER
