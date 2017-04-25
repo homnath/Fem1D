@@ -1,0 +1,22 @@
+# Define the 1D second order differential equation: 
+# a(d2u/dx2) + b(du/dx) + cu = f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+# where, both u and f are function of x only
+a: 1.0  
+b: 0.0
+c: 1.0
+f: 10.0
+
+# Define mesh
+Length: 10.0
+Number of elements: 4
+Number of nodes per element: 3
+
+# Define boundary conditions.
+# u0 => u(0) and qL => q(L).
+u0: 0.0
+qL: 10.0
+
+# Compute and save also the exact result for
+# a=1, b=0, c=-1, f=10, u0=0, qL=10, L=10
+# 1: yes, 0: no
+Compute and save exact result: 1 

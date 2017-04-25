@@ -1,0 +1,64 @@
+! FEM analysis of 1-D second order ordinary differential equation
+! using Lagrange interpolation polynomials.
+! This program solves the 1-D second order differemtial equation:
+! a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+! where, both u and f are function of x only
+! DEVELOPER
+!   Hom Nath Gharti
+!   formerly at Institute of Engineering, Tribhuvan University, Nepal
+!   formerly at NORSAR, Norway
+!   Department of Geosciences, Princeton University, USA
+!   hngharti_AT_gmail_DOT_com 
+!
+! HISTORY
+!   Oct 24,2006, HNG: original package created
+!   Apr 25,2017, HNG: modified package 
+
+COMPILE:
+	- go to parent folder
+	- type: make
+RUN:
+	./bin/fem1d input_file
+  EXAMPLE:
+  ./bin/fem1d ./input/example.fem
+
+INPUT:
+  - Input file has the following format:
+
+  #----------------------------------------------------------------------------
+  # Define the 1D second order differential equation: 
+  # a(d2u/dx2) + b(du/dx) + cu = f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
+  # where, both u and f are function of x only
+  a: 1.0  
+  b: 0.0
+  c: 1.0
+  f: 10.0
+
+  # Define mesh
+  Length: 10.0
+  Number of elements: 4
+  Number of nodes per element: 3
+
+  # Define boundary conditions.
+  # u0 => u(0) and qL => q(L).
+  u0: 0.0
+  qL: 10.0
+
+  # Compute and save also the exact result for
+  # a=1, b=0, c=-1, f=10, u0=0, qL=10, L=10
+  # 1: yes, 0: no
+  Compute and save exact result: 1 
+  #----------------------------------------------------------------------------
+	
+  - please see ./input/example.fem file.
+
+OUTPUT:
+	- computed and analytical (if pexact=1) results can be plotted using plot.dat
+    or plotTP.dat files. The later file can be viewed in TecPlot. 
+    Note that analytical result is currently computed precisely for the 
+    following parameters: a=1, b=0, c=-1, f=10, u0=0, qL=10, L=10
+
+REFERENCES:
+
+J. N. Reddy, 2005: An Introduction to the Finite Element Method, McGraw-Hill Education, 3rd edition
+S. J. Chapman, 2007: Fortran 95/2003 for Scientists & Engineers, McGraw-Hill Education, 3rd Edition

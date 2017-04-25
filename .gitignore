@@ -1,0 +1,17 @@
+arc/
+*.o
+bin/*
+bin/*.o
+src/*.o
+src/*.mod
+
+src/test*
+# Trash files
+.*swp
+.*swo
+*~
+submit*
+*.output
+slurm*
+fort.*
+*OLD.*
