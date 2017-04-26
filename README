@@ -3,11 +3,11 @@ FEM analysis of 1-D second order ordinary differential equation
 This program solves the 1-D second order ordinary differential equation:
 a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
 where, both u and f are function of x only. This package is mainly intended for
-educational purpose, and it introduces a general concept on discretization, 
+educational purpose, and it demonstrates a general concept on discretization, 
 Gauss quadrature, stiffness matrix, boundary conditions, and matrix solution.
 -------------------------------------------------------------------------------
 
-DEVELOPER
+DEVELOPER:
   Hom Nath Gharti
   formerly at Institute of Engineering, Tribhuvan University, Nepal
   formerly at NORSAR, Norway
@@ -17,13 +17,17 @@ DEVELOPER
 VERSION:
   Fem1D 1.0.0
 
-HISTORY
+HISTORY:
   Oct 24,2006, HNG: original package created
   Apr 25,2017, HNG: modified package 
+
+TODO:
+  - make analytical solution more general
 
 COMPILE:
 	- go to parent folder
 	- type: make
+
 RUN:
 	./bin/fem1d input_file
   EXAMPLE:
