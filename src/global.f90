@@ -1,11 +1,11 @@
-! this subroutine defines global variable/parameters
-! DEVELOPER
-!   Hom Nath Gharti
-!   hngharti_AT_gmail_DOT_com
+!This module defines global variables/parameters
+!DEVELOPER
+!  Hom Nath Gharti
+!  hngharti_AT_gmail_DOT_com
 !
-! HISTORY
-!   Oct 24,2006, HNG: original package created
-!   Apr 25,2017, HNG: modified package
+!HISTORY
+!  Apr 25,2017, HNG: modified package
+!  Oct 24,2006, HNG: original package created
 module global
 use set_precision
 implicit none

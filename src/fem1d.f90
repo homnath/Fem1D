@@ -1,23 +1,23 @@
-! FEM analysis of 1-D second order ordinary differential equationi using
-! general Lagrange elements
+!FEM analysis of 1-D second order ordinary differential equationi using
+!general Lagrange elements
 !
-! PURPOSE
-!   This program solves the 1-D second order differential equation:
-!   a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
-!   where, both u and f are function of x only
+!PURPOSE
+!  This program solves the 1-D second order differential equation:
+!  a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
+!  where, both u and f are functions of x only.
 !
-! DEVELOPER
-!   Hom Nath Gharti
-!   formerly at Institute of Engineering, Tribhuvan University, Nepal
-!   formerly at NORSAR, Norway
-!   Department of Geosciences, Princeton University, USA
-!   hngharti_AT_gmail_DOT_com
+!DEVELOPER
+!  Hom Nath Gharti
+!  formerly at Institute of Engineering, Tribhuvan University, Nepal
+!  formerly at NORSAR, Norway
+!  Department of Geosciences, Princeton University, USA
+!  hngharti_AT_gmail_DOT_com
 !
-! HISTORY
-!   Oct 24,2006, HNG: original package creates
-!   Apr 25,2017, HNG: modified package
+!HISTORY
+!  Oct 24,2006, HNG: original package creates
+!  Apr 25,2017, HNG: modified package
 
-! lines below are helpful to compile a single file if Makefile is not used
+!lines below are helpful to compile a single file if Makefile is not used
 !include './global.f90' ! Global variables
 !include './mesh.f90' ! Mesh information
 !include './interpolate.f90'
