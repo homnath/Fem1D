@@ -6,7 +6,7 @@
 !-----------------------------------------------
 ! This program solves the 1-D second order differential equation:
 ! a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
-! where, both u and f are function of x only
+! where, both u and f are functions of x only
 
 subroutine meshgen
 use global
