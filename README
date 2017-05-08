@@ -5,7 +5,7 @@ a d2u/dx2 + b du/dx + c u = f, u(0) = 0, a du/dx at (x = L) = q
 where, both u and f are functions of x only. This package is mainly intended
 for educational purpose, and it demonstrates a general concept on the
 discretization, Gaussian quadrature, stiffness matrix, boundary conditions,
-and matrix solution.
+matrix solution, and modular programming.
 -------------------------------------------------------------------------------
 
 DEVELOPER:

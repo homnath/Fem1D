@@ -54,4 +54,4 @@ integer,dimension(maxnode) :: global_fid ! 1=Known, 0=Unknown
 
 integer :: stdout=6
 end module global
-!===============================================
+!==============================================================================

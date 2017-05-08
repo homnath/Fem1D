@@ -13,15 +13,15 @@ FFLAGS = -std=f2003 -g -fbounds-check -fimplicit-none -O5 -pedantic -pedantic-er
 FC_COMPILE = $(FC) $(FFLAGS)
 
 # object tree
-OBJ = $(BIN)/set_precision.o   \
-			$(BIN)/global.o          \
-			$(BIN)/read_input.o          \
-			$(BIN)/mesh.o            \
-			$(BIN)/interpolate.o     \
-			$(BIN)/form.o            \
-			$(BIN)/bc.o              \
-			$(BIN)/solve.o           \
-			$(BIN)/plot.o            \
+OBJ = $(BIN)/precision.o       \
+			$(BIN)/global.o              \
+			$(BIN)/input.o          \
+			$(BIN)/mesh.o                \
+			$(BIN)/integration.o         \
+			$(BIN)/preprocess.o          \
+			$(BIN)/boundary_condition.o  \
+			$(BIN)/solver.o              \
+			$(BIN)/postprocess.o        \
 			$(BIN)/fem1d.o
 
 # main executable for 1D FEM

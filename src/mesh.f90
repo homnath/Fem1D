@@ -7,8 +7,9 @@
 ! This program solves the 1-D second order differential equation:
 ! a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
 ! where, both u and f are functions of x only
-
-subroutine mesh
+module mesh
+contains
+subroutine create_mesh
 use global
 implicit none
 integer :: i,j
@@ -46,5 +47,6 @@ enddo
 print*,'----------------------------------------'
 
 return
-end subroutine mesh
+end subroutine create_mesh
+end module mesh
 !===============================================

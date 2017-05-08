@@ -17,17 +17,14 @@
 !  Oct 24,2006, HNG: original package creates
 !  Apr 25,2017, HNG: modified package
 
-!lines below are helpful to compile a single file if Makefile is not used
-!include './global.f90' ! Global variables
-!include './mesh.f90' ! Mesh information
-!include './interpolate.f90'
-!include './form.f90' ! Formation of matrices
-!include './bc.f90' ! Boundary conditions
-!include './solve.f90' ! Solution of matrices
-!include './plot.f90' ! Plotting the result
-
 program fem1d
 use global
+use input
+use mesh
+use boundary_condition
+use preprocess
+use solver
+use postprocess
 implicit none
 character(len=250) :: arg1,inp_fname,prog
 
@@ -57,20 +54,24 @@ endif
 call get_command_argument(1, inp_fname)
 
 !-----------------
-! Preprocess
+! readin input information
 !-----------------
 print*,'Reading input....'
 call read_input(inp_fname)
 print*,'Creating mesh....'
-call mesh
+call create_mesh
 
 !-----------------
-! Process
+! Preprocess
 !-----------------
 print*,'Forming matrices.....'
-call form
+call form_matrix_vector
 print*,'Applying boundary conditions.......'
-call apply_bc
+call apply_boundary_condition
+
+!-----------------
+! Solve
+!-----------------
 print*,'Solving..........'
 call solve
 
@@ -83,4 +84,4 @@ call plot
 print*,'Finished successfully'
 print*,'----------------------------------------'
 end program fem1d
-!===============================================
+!==============================================================================
