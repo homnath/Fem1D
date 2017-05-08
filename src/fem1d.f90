@@ -62,7 +62,7 @@ call get_command_argument(1, inp_fname)
 print*,'Reading input....'
 call read_input(inp_fname)
 print*,'Creating mesh....'
-call meshgen
+call mesh
 
 !-----------------
 ! Process
