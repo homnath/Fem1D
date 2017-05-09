@@ -1,4 +1,5 @@
-! Read the boundary conditions and modify the matrices accordingly.
+! Read the boundary conditions and modify the RHS vector accordingly. Stiffness
+! matrix will be modified in the later stage.
 ! DEVELOPER
 !   Hom Nath Gharti
 !   hngharti_AT_gmail_DOT_com

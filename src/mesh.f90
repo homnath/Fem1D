@@ -1,12 +1,11 @@
 ! Create mesh
-! FEM analysis for 1-D second order ordinary differential equation
-! Date    Programmer      Status
-!========== =================== ================
-!2006/10/24   Hom Nath Gharti   General Lagrange elements
-!-----------------------------------------------
-! This program solves the 1-D second order differential equation:
-! a(d2u/dx2)+b(du/dx)+cu=f, u(0)=0, a(du/dx) at (x=L) = q at (x=L)
-! where, both u and f are functions of x only
+! DEVELOPER
+!   Hom Nath Gharti
+!   hngharti_AT_gmail_DOT_com
+!
+! HISTORY
+!   Oct 24,2006, HNG: original package created
+!   Apr 25,2017, HNG: modified package
 module mesh
 contains
 subroutine create_mesh

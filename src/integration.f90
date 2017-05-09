@@ -1,4 +1,4 @@
-! Lagrange interpolation functions
+! Lagrange interpolation functions, Gaussian quadrature.
 ! DEVELOPER
 !   Hom Nath Gharti
 !   hngharti_AT_gmail_DOT_com

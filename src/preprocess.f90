@@ -1,4 +1,4 @@
-! Formation of local and global matrices
+! Formation of local and global matrices and vectors
 ! DEVELOPER
 !   Hom Nath Gharti
 !   hngharti_AT_gmail_DOT_com
