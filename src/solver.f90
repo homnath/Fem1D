@@ -37,21 +37,19 @@ do i=1,nnode
     enddo
   endif
 enddo
-print*,'----------------------------------------'
-print*,'Global stiffness matrix'
-print*,'----------------------------------------'
+write(*,*)'----------------------------------------'
+write(*,*)'Global stiffness matrix'
+write(*,*)'----------------------------------------'
 do i=1,row
-  print 30,amat(i,1:col)
-30  format(1x,20(f7.4))
+  write(*,'(20(f7.4,1x))')amat(i,1:col)
 enddo
 
-print*,'----------------------------------------'
-print*,'Global force vector'
-print*,'----------------------------------------'
-print 40,bvec(1:row)
-40  format(1x,f7.4)
+write(*,*)'----------------------------------------'
+write(*,*)'Global force vector'
+write(*,*)'----------------------------------------'
+write(*,'(f7.4)')bvec(1:row)
 
-print*,'----------------------------------------'
+write(*,*)'----------------------------------------'
 
 ! solver starts here
 ! forward elimination

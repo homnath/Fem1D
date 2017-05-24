@@ -56,32 +56,32 @@ call get_command_argument(1, inp_fname)
 !-----------------
 ! readin input information
 !-----------------
-print*,'Reading input....'
+write(*,*)'Reading input....'
 call read_input(inp_fname)
-print*,'Creating mesh....'
+write(*,*)'Creating mesh....'
 call create_mesh
 
 !-----------------
 ! Preprocess
 !-----------------
-print*,'Forming matrices.....'
+write(*,*)'Forming matrices.....'
 call form_matrix_vector
-print*,'Applying boundary conditions.......'
+write(*,*)'Applying boundary conditions.......'
 call apply_boundary_condition
 
 !-----------------
 ! Solve
 !-----------------
-print*,'Solving..........'
+write(*,*)'Solving..........'
 call solve
 
 !-----------------
 ! Post process
 !-----------------
-print*,'Plotting..................'
+write(*,*)'Plotting..................'
 call plot
 
-print*,'Finished successfully'
-print*,'----------------------------------------'
+write(*,*)'Finished successfully'
+write(*,*)'----------------------------------------'
 end program fem1d
 !==============================================================================

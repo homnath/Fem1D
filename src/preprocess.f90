@@ -46,22 +46,20 @@ do elm=1,nelmt
 enddo
 !stop
 do i=1,nelmt
-  print*,'----------------------------------------'
-  print*,'Local stiffness matrix for element:',i
-  print*,'----------------------------------------'
+  write(*,*)'----------------------------------------'
+  write(*,*)'Local stiffness matrix for element:',i
+  write(*,*)'----------------------------------------'
   do j=1,nedof
-    print 10,local_kmat(:,j,i)
+    write(*,'(3(f15.10,1x))')local_kmat(:,j,i)
   enddo
 enddo
-10  format(3(1x,f15.10))
 
 do i=1,nelmt
-  print*,'----------------------------------------'
-  print*,'Local force vector for element:',i
-  print*,'----------------------------------------'
-  print 20,local_fvec(:,i)
+  write(*,*)'----------------------------------------'
+  write(*,*)'Local force vector for element:',i
+  write(*,*)'----------------------------------------'
+  write(*,'(f10.4)')local_fvec(:,i)
 enddo
-20  format(1x,f10.4)
 
 ! Global matrices
 do elm=1,nelmt
@@ -88,19 +86,17 @@ enddo
 
 deallocate(local_fvec,local_kmat)
 
-print*,'----------------------------------------'
-print*,'Global stiffness matrix'
-print*,'----------------------------------------'
+write(*,*)'----------------------------------------'
+write(*,*)'Global stiffness matrix'
+write(*,*)'----------------------------------------'
 do i=1,nnode
-  print 30,global_kmat(i,1:nnode)
-30  format(1x,11(f7.4))
+  write(*,'(11(f7.4,1x))')global_kmat(i,1:nnode)
 enddo
 
-print*,'----------------------------------------'
-print*,'Global force vector'
-print*,'----------------------------------------'
-print 40,global_fvec(1:nnode)
-40  format(1x,f7.4)
+write(*,*)'----------------------------------------'
+write(*,*)'Global force vector'
+write(*,*)'----------------------------------------'
+write(*,'(f7.4)')global_fvec(1:nnode)
 
 return
 

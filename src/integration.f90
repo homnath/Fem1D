@@ -74,7 +74,7 @@ real(kind=kreal),dimension(ngpoint) :: xi,w
 
 ! gauss points and weights
 if(ngpoint<1)then
-  print*,ngpoint,' Integration points impossible!'
+  write(*,*)ngpoint,' Integration points impossible!'
   stop
 elseif(ngpoint==1)then
   xi(1)=0.0_kreal
@@ -125,7 +125,7 @@ elseif(ngpoint==6)then
   xi(6)=-xi(1)
   w(6)=w(1)
 else
-  print*,'Modify the gauss integration for more than six points!'
+  write(*,*)'Modify the gauss integration for more than six points!'
   stop
 endif
 end subroutine gauss

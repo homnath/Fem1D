@@ -24,26 +24,26 @@ nnode=nelmt*(nenode-1)+1
 dx=length/(nnode-1)
 
 ! nodal co-ordinates
-print*,'----------------------------------------'
-print*,'Coordinates'
-print*,'----------------------------------------'
+write(*,*)'----------------------------------------'
+write(*,*)'Coordinates'
+write(*,*)'----------------------------------------'
 do i=1,nnode
   node(i)%x=(i-1)*dx
-  print*,node(i)%x
+  write(*,*)node(i)%x
 end do
-print*,'----------------------------------------'
+write(*,*)'----------------------------------------'
 
 ! connectivity
-print*,'Connectivity'
-print*,'----------------------------------------'
+write(*,*)'Connectivity'
+write(*,*)'----------------------------------------'
 
 do i=1,nelmt
   do j=1,nenode
     elmt(i)%node(j)=(i-1)*(nenode-1)+j
   enddo
-  print*,(elmt(i)%node(j),j=1,nenode)
+  write(*,*)(elmt(i)%node(j),j=1,nenode)
 enddo
-print*,'----------------------------------------'
+write(*,*)'----------------------------------------'
 
 return
 end subroutine create_mesh
