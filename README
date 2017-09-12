@@ -66,7 +66,9 @@ INPUT:
 
 OUTPUT:
 	- computed and analytical (if pexact=1) results can be plotted using plot.dat
-    or plotTP.dat files. The later file can be viewed in TecPlot. 
+    or plotTP.dat files. "plot.dat" can be plotted using Gnuplot or any 
+    spreadsheet applications such as LibreOffice calc and Microsoft Excel.
+    The later file can be viewed in TecPlot. 
     Note that analytical result is currently computed precisely for the 
     following parameters: a=1, b=0, c=-1, f=10, u0=0, qL=10, L=10
 
